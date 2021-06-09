@@ -3,7 +3,7 @@ library(stargazer)
 library(car)
 library(olsrr)
 
-data = read.csv("C:\\Users\\david\\Downloads\\stats (2).csv")
+data = read.csv("INPUT DATASET HERE")
 data = data[-10] # delete weird NA column
 colnames(data)[1] = "last_name"
 data[data$player_id %in% names(which(table(data$player_id) == 1)), ] # remove players that only appeared once
